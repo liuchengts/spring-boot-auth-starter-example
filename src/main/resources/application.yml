@@ -1,0 +1,9 @@
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+info:
+  auth:
+    tokenPrefix: test
+    overdueTime: 30
+    domain: www.aaxx.com
