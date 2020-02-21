@@ -1,4 +1,5 @@
-# spring-boot-auth-starter
+# spring-boot-auth-starter-example
+[spring-boot-auth-starter](https://github.com/liuchengts/spring-boot-auth-starter)
 基于springbootweb的权限拦截验证
 ### 使用前需要的准备
 ### 使用说明
