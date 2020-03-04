@@ -40,6 +40,7 @@ public class TestAuthController {
     @IgnoreLogin
     @GetMapping("/auth3")
     public Session testAuth3(Session session) {
+        //由于不校验登录，所以session为空
         log.info("访问到了 auth3");
         return session;
     }
