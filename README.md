@@ -1,14 +1,8 @@
 # spring-boot-auth-starter-example
 [spring-boot-auth-starter](https://github.com/liuchengts/spring-boot-auth-starter)
-基于springbootweb的权限拦截验证
-### 使用前需要的准备
+基于springbootweb的权限拦截验证示例
 ### 使用说明
-* 说明：主要针对需要登录或需要访问权限的资源使用
-* @Auth 权限注解
-* @NoAuthGetSession 不强制校验权限(默认不强制校验）
-* @IgnoreLogin 允许不登录(默认允许不登录）
+* 需要自定义的相关内容放置在:``` com.boot.auth.example.custom ```
+* ```@Auth 、@NoAuthGetSession 、@IgnoreLogin、@OperLog``` 相关注解使用参见 ``` com.boot.auth.example.controllers ```
 
-#### 权限注解的使用
-* 三个注解可以叠加使用，优先级(由高到低)为 @IgnoreLogin @NoAuthGetSession @Auth
-* 三个注解都可以对类或方法级别生效
-* 使用示例 参见 com.boot.auth.example.controllers 下的部分示例
+

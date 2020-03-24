@@ -1,22 +1,14 @@
 package com.boot.auth.example.controllers;
 
-import com.boot.auth.example.common.RolesConstant;
+import com.boot.auth.example.custom.RolesConstant;
 import com.boot.auth.starter.annotation.Auth;
 import com.boot.auth.starter.annotation.IgnoreLogin;
 import com.boot.auth.starter.annotation.NoAuthGetSession;
-import com.boot.auth.starter.common.AuthConstant;
 import com.boot.auth.starter.common.Session;
-import com.boot.auth.starter.utils.AESUtil;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Set;
-import java.util.concurrent.TimeUnit;
 
 
 @Slf4j

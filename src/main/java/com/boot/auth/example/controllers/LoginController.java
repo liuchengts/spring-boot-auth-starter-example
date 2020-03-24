@@ -1,6 +1,6 @@
 package com.boot.auth.example.controllers;
 
-import com.boot.auth.example.common.RolesConstant;
+import com.boot.auth.example.custom.RolesConstant;
 import com.boot.auth.starter.common.AuthConstant;
 import com.boot.auth.starter.service.AuthService;
 import lombok.extern.slf4j.Slf4j;
@@ -28,8 +28,8 @@ public class LoginController {
         Map<String, Object> parameters = new HashMap<>();
         parameters.put(AuthConstant.SESSION_NICK_NAME, "我是用户昵称");
         String group = "";
-        String userNo = "";
-        String roles = RolesConstant.USER_1 + "," + RolesConstant.DEFAULT;
+        String userNo = "123456";
+        String roles = RolesConstant.USER_1 + AuthConstant.HEAD_TOKEN_SEPARATOR + RolesConstant.DEFAULT;
         return authService.auth(group, userNo, roles, parameters, response, request);
     }
 }

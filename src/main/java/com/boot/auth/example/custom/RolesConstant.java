@@ -1,4 +1,4 @@
-package com.boot.auth.example.common;
+package com.boot.auth.example.custom;
 
 import com.boot.auth.starter.common.DefaultRolesConstant;
 
@@ -9,6 +9,7 @@ import com.boot.auth.starter.common.DefaultRolesConstant;
  * <p>
  * extends DefaultRolesConstant 这个继承不是必须的
  */
+//todo 在这里自己定义权限角色
 public interface RolesConstant extends DefaultRolesConstant {
     /**
      * user1
