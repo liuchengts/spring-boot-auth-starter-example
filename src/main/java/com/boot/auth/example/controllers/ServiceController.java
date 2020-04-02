@@ -30,10 +30,10 @@ public class ServiceController {
      */
     @OperLog(operType = OperLogConstant.SERVICE1)
     @GetMapping("/1")
-    public Object service1(@RequestHeader(value = AuthConstant.HEADER_KEY_PLATFORM) String platform,
-                           @RequestHeader(value = AuthConstant.HEADER_KEY_CHANNEL) String channel,
-                           @RequestHeader(value = AuthConstant.HEADER_KEY_VERSION) String version,
-                           @RequestHeader(value = AuthConstant.HEADER_KEY_DEVICEID) String deviceId) {
+    public Object service1(@RequestHeader(value = AuthConstant.HEADER_KEY_PLATFORM, required = false) String platform,
+                           @RequestHeader(value = AuthConstant.HEADER_KEY_CHANNEL, required = false) String channel,
+                           @RequestHeader(value = AuthConstant.HEADER_KEY_VERSION, required = false) String version,
+                           @RequestHeader(value = AuthConstant.HEADER_KEY_DEVICEID, required = false) String deviceId) {
         Map<String, String> map = new HashMap<>();
         map.put(AuthConstant.HEADER_KEY_PLATFORM, platform);
         map.put(AuthConstant.HEADER_KEY_CHANNEL, channel);
