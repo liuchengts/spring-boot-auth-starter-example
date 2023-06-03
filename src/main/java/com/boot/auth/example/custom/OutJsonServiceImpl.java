@@ -12,14 +12,19 @@ import org.springframework.stereotype.Service;
 @Primary
 @Service
 public class OutJsonServiceImpl extends DefaultOutJsonServiceImpl {
-    @Autowired
+    final
     ObjectMapper objectMapper;
+
+    public OutJsonServiceImpl(ObjectMapper objectMapper) {
+        super(objectMapper);
+        this.objectMapper = objectMapper;
+    }
 
     @Override
     public String errorOutJson(String msg, String code) {
         //todo 在这里自己定义被权限拦截后的数据返回格式
         try {
-            return objectMapper.writeValueAsString("error");
+            return objectMapper.writeValueAsString(msg);
         } catch (Exception e) {
             throw new AuthException(e);
         }

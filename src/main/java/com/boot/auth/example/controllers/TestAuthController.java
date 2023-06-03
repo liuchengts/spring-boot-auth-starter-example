@@ -5,7 +5,9 @@ import com.boot.auth.starter.annotation.Auth;
 import com.boot.auth.starter.annotation.IgnoreLogin;
 import com.boot.auth.starter.annotation.NoAuthGetSession;
 import com.boot.auth.starter.common.Session;
+import com.boot.auth.starter.support.GuavaCacheSupport;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,10 +17,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/test")
 public class TestAuthController {
+    @Autowired
+    GuavaCacheSupport guavaCacheSupport;
+
     @Auth
     @GetMapping("/auth1")
     public Session testAuth1(Session session) {
         log.info("访问到了 auth1");
+        log.info("map:{}", guavaCacheSupport.getCache().asMap());
         return session;
     }
 
@@ -47,6 +53,7 @@ public class TestAuthController {
     @GetMapping("/auth_r1")
     public Session testAuthR1(Session session) {
         log.info("访问到了 auth_r1");
+        log.info("map:{}", guavaCacheSupport.getCache().asMap());
         return session;
     }
 

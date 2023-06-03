@@ -29,7 +29,7 @@ public class LoginController {
         parameters.put(AuthConstant.SESSION_NICK_NAME, "我是用户昵称");
         String group = "";
         String userNo = "123456";
-        String roles = RolesConstant.USER_1 + AuthConstant.HEAD_TOKEN_SEPARATOR + RolesConstant.DEFAULT;
+        String roles = String.join(AuthConstant.HEAD_TOKEN_SEPARATOR, RolesConstant.USER_1, RolesConstant.DEFAULT);
         return authService.auth(group, userNo, roles, parameters, response, request);
     }
 }
