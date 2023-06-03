@@ -1,14 +1,10 @@
-#spring:
-#  redis:
-#    host: localhost
-#    port: 6379
 info:
   auth:
     tokenPrefix: test
     overdueTime: 9999999999
     domain: localhost
-    exclude: true
+#    exclude: true
     cacheInitialCapacity: 100
-    cacheMaximumSize: 200
+    cacheMaximumSize: 2000
     cacheStats: true
     loadingCache: false
