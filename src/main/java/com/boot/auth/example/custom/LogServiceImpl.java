@@ -6,6 +6,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
+/**
+ * 自定义业务log拦截数据处理方案
+ */
 @Slf4j
 @Primary
 @Service
