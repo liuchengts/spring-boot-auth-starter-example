@@ -6,7 +6,7 @@ import com.boot.auth.starter.support.GuavaCacheSupport;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Primary;
 import org.springframework.data.redis.core.StringRedisTemplate;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
 import java.util.concurrent.TimeUnit;
@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
  */
 @Slf4j
 @Primary
-@Service
+@Component
 public class CacheServiceImpl extends DefaultCacheServiceImpl {
     final
     StringRedisTemplate stringRedisTemplate;
@@ -26,6 +26,7 @@ public class CacheServiceImpl extends DefaultCacheServiceImpl {
                             StringRedisTemplate stringRedisTemplate) {
         super(guavaCacheSupport, authProperties);
         this.stringRedisTemplate = stringRedisTemplate;
+        // 手动关闭 guavaCacheSupport 功能
         guavaCacheSupport.notEnabled();
     }
 

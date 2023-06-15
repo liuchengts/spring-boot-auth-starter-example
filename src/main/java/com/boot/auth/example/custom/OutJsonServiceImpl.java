@@ -4,16 +4,15 @@ import com.boot.auth.starter.exception.AuthException;
 import com.boot.auth.starter.service.impl.DefaultOutJsonServiceImpl;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 /**
  * 自定义异常输出方案
  */
 @Slf4j
 @Primary
-@Service
+@Component
 public class OutJsonServiceImpl extends DefaultOutJsonServiceImpl {
     final
     ObjectMapper objectMapper;
