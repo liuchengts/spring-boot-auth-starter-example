@@ -1,5 +1,6 @@
 package com.boot.auth.example.controllers;
 
+import com.boot.auth.example.custom.OperLogConstant;
 import com.boot.auth.example.custom.RolesConstant;
 import com.boot.auth.starter.annotation.Auth;
 import com.boot.auth.starter.annotation.OperLog;
@@ -10,7 +11,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.boot.auth.example.custom.OperLogConstant;
 
 import java.util.HashMap;
 import java.util.Map;
