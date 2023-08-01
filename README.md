@@ -1,5 +1,5 @@
 # spring-boot-auth-starter-example
-# 2023-8-1期 废弃本项目，代码示例均在[spring-boot-auth-starter](https://github.com/liuchengts/spring-boot-auth-starter)的`test`中体现
+# 2023-8-1起 废弃本项目，代码示例均在[spring-boot-auth-starter](https://github.com/liuchengts/spring-boot-auth-starter)的`test`中体现
 [spring-boot-auth-starter](https://github.com/liuchengts/spring-boot-auth-starter)
 基于`Spring Boot Web`的权限拦截验证示例
 
